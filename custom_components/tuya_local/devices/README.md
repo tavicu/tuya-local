@@ -532,7 +532,7 @@ for a button press, map this to the desired dps_val if a different
 value is required.
 
 ### `climate`
-- **aux_heat** (optional, boolean) a dp to control the aux heat switch if the device has one.
+- **aux_heat** (optional, boolean, DEPRECATED) a dp to control the aux heat switch if the device has one. Note this is being deprecated by HA and no longer accessible from the UI since HA 2023.9, though the deprecation announcement is yet to be made as of 2023.11.  It is recommended not to use this, and instead use an separate switch entity.
 - **current_temperature** (optional, number) a dp that reports the current temperature.
 - **current_humidity** (optional, number) a dp that reports the current humidity (%).
 - **fan_mode** (optional, mapping of strings) a dp to control the fan mode if available.
@@ -590,6 +590,11 @@ Humidifer can also cover dehumidifiers (use class to specify which).
 - **humidity** (optional, number): a dp to control the target humidity of the device
 - **current_humidity** (optional, number): a dp to report the current humidity measured by the device
 
+### `lawn_mower`
+- **activity** (required, string): a dp to report the current activity of the mower.  Valid activities are `mowing`, `paused`, `docked`, `error` (from LawnMowerActivities in https://github.com/home-assistant/core/blob/dev/homeassistant/components/lawn_mower/const.py).  Any additional activities should be mapped to one of those, and exposed through an extra attribute or sensor entity that shows all the statuses that the mower is reporting.
+
+- **command** (required, string): a dp to send commands to the mower.  Recognised commands are `start_mowing`, `pause` and `dock`.  Any additional commands should be implemented via a `button` or `select` entity.
+
 ### `light`
 - **switch** (optional, boolean): a dp to control the on/off state of the light
 - **brightness** (optional, number 0-255): a dp to control the dimmer if available.
@@ -634,6 +639,11 @@ no information will be available about which specific credential was used to unl
     This may be used as an alternative to a range setting on the **value** dp if the range is dynamic
 - **maximum** (optional, number): a dp that reports the maximum the number can be set to.
     This may be used as an alternative to a range setting on the **value** dp if the range is dynamic
+
+### `remote`
+- **send** (required, accepts a string): a dp to send remote codes.
+- **control** (optional, accepts strings `"send_ir"`, `"study"`, `"study_exit"`): a dp to send commands seperately from ir codes.  If not supplied, commands will be JSON formatted and sent through the **send** dp.
+- **receive** (optional, returns strings): a dp to receive learned commands on.  If not supplied, the `remote.learn_command` service call will not be available. 
 
 ### `select`
 - **option** (required, mapping of strings): a dp to control the option that is selected.

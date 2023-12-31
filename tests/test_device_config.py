@@ -67,6 +67,7 @@ KNOWN_DPS = {
         "optional": ["switch", "oscillate", "direction"],
     },
     "humidifier": {"required": ["switch", "humidity"], "optional": ["mode"]},
+    "lawn_mower": {"required": ["activity", "command"], "optional": []},
     "light": {
         "required": [{"or": ["switch", "brightness", "effect"]}],
         "optional": ["color_mode", "color_temp", "rgbhsv"],
@@ -92,6 +93,10 @@ KNOWN_DPS = {
     "number": {
         "required": ["value"],
         "optional": ["unit", "minimum", "maximum"],
+    },
+    "remote": {
+        "required": ["send"],
+        "optional": ["receive"],
     },
     "select": {"required": ["option"], "optional": []},
     "sensor": {"required": ["sensor"], "optional": ["unit"]},
