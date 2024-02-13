@@ -63,7 +63,7 @@ class TuyaLocalWaterHeater(TuyaLocalEntity, WaterHeaterEntity):
         self._operation_mode_dps = dps_map.pop(ATTR_OPERATION_MODE, None)
         self._away_mode_dps = dps_map.pop(ATTR_AWAY_MODE, None)
         self._init_end(dps_map)
-        self._support_flags = 0
+        self._support_flags = WaterHeaterEntityFeature(0)
 
         if self._operation_mode_dps:
             self._support_flags |= WaterHeaterEntityFeature.OPERATION_MODE
@@ -104,7 +104,11 @@ class TuyaLocalWaterHeater(TuyaLocalEntity, WaterHeaterEntity):
         # represented, not a number of decimal places.
         return 1.0 / max(
             self._temperature_dps.scale(self._device),
-            self._current_temperature_dps.scale(self._device),
+            (
+                self._current_temperature_dps.scale(self._device)
+                if self._current_temperature_dps
+                else 1.0
+            ),
         )
 
     @property
@@ -210,7 +214,7 @@ class TuyaLocalWaterHeater(TuyaLocalEntity, WaterHeaterEntity):
 
         if self._temperature_dps:
             r = self._temperature_dps.range(self._device)
-            return r.get("min")
+            return r[0]
 
     @property
     def max_temp(self):
@@ -221,7 +225,7 @@ class TuyaLocalWaterHeater(TuyaLocalEntity, WaterHeaterEntity):
 
         if self._temperature_dps:
             r = self._temperature_dps.range(self._device)
-            return r.get("max")
+            return r[1]
 
     async def async_turn_on(self):
         """
