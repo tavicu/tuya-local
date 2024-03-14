@@ -3,6 +3,7 @@ Test MoeBot S mower.
 Primarily for testing the STOP command which this device is the first to use,
 and the lawn_mower platform.
 """
+
 from homeassistant.components.lawn_mower.const import (
     LawnMowerActivity,
     LawnMowerEntityFeature,
@@ -40,7 +41,8 @@ class TestMoebot(TuyaDeviceTestCase):
         self.mower = self.entities.get("lawn_mower")
         self.mark_secondary(
             [
-                "binary_sensor_error",
+                "binary_sensor_problem",
+                "select_mowing_mode",
                 "sensor_problem",
                 "switch_rain_mode",
                 "number_running_time",

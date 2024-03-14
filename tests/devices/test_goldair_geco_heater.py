@@ -45,7 +45,7 @@ class TestGoldairGECOHeater(
         )
         self.setUpBasicBinarySensor(
             ERROR_DPS,
-            self.entities.get("binary_sensor_error"),
+            self.entities.get("binary_sensor_problem"),
             device_class=BinarySensorDeviceClass.PROBLEM,
             testdata=(1, 0),
         )
@@ -53,14 +53,16 @@ class TestGoldairGECOHeater(
             [
                 "lock_child_lock",
                 "number_timer",
-                "binary_sensor_error",
+                "binary_sensor_problem",
             ]
         )
 
     def test_supported_features(self):
         self.assertEqual(
             self.subject.supported_features,
-            ClimateEntityFeature.TARGET_TEMPERATURE,
+            ClimateEntityFeature.TARGET_TEMPERATURE
+            | ClimateEntityFeature.TURN_OFF
+            | ClimateEntityFeature.TURN_ON,
         )
 
     def test_icon(self):

@@ -85,7 +85,9 @@ class TestNashoneMTS700WBThermostat(
     def test_supported_features(self):
         self.assertEqual(
             self.subject.supported_features,
-            ClimateEntityFeature.TARGET_TEMPERATURE,
+            ClimateEntityFeature.TARGET_TEMPERATURE
+            | ClimateEntityFeature.TURN_OFF
+            | ClimateEntityFeature.TURN_ON,
         )
 
     def test_current_temperature(self):
@@ -150,5 +152,3 @@ class TestNashoneMTS700WBThermostat(
 
     def test_icons(self):
         self.assertEqual(self.basicNumber.icon, "mdi:arrow-collapse-up")
-        self.assertEqual(self.basicSelect.icon, "mdi:timer")
-        self.assertEqual(self.basicSensor.icon, "mdi:timer")

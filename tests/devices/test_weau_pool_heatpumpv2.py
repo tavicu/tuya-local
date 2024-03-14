@@ -36,16 +36,19 @@ class TestWeauPoolHeatpumpV2(
         )
         self.setUpBasicBinarySensor(
             FAULT_DPS,
-            self.entities.get("binary_sensor_fault"),
+            self.entities.get("binary_sensor_problem"),
             device_class=BinarySensorDeviceClass.PROBLEM,
             testdata=(4, 0),
         )
-        self.mark_secondary(["binary_sensor_fault"])
+        self.mark_secondary(["binary_sensor_problem"])
 
     def test_supported_features(self):
         self.assertEqual(
             self.subject.supported_features,
-            ClimateEntityFeature.TARGET_TEMPERATURE | ClimateEntityFeature.PRESET_MODE,
+            ClimateEntityFeature.TARGET_TEMPERATURE
+            | ClimateEntityFeature.PRESET_MODE
+            | ClimateEntityFeature.TURN_OFF
+            | ClimateEntityFeature.TURN_ON,
         )
 
     def test_current_temperature(self):

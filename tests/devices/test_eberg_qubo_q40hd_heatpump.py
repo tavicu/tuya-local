@@ -60,19 +60,10 @@ class TestEbergQuboQ40HDHeatpump(
                 | ClimateEntityFeature.FAN_MODE
                 | ClimateEntityFeature.PRESET_MODE
                 | ClimateEntityFeature.SWING_MODE
+                | ClimateEntityFeature.TURN_OFF
+                | ClimateEntityFeature.TURN_ON
             ),
         )
-
-    def test_icon(self):
-        self.dps[POWER_DPS] = True
-        self.dps[HVACMODE_DPS] = "cold"
-        self.assertEqual(self.subject.icon, "mdi:snowflake")
-        self.dps[HVACMODE_DPS] = "hot"
-        self.assertEqual(self.subject.icon, "mdi:fire")
-        self.dps[HVACMODE_DPS] = "dehumidify"
-        self.assertEqual(self.subject.icon, "mdi:water-percent")
-        self.dps[POWER_DPS] = False
-        self.assertEqual(self.subject.icon, "mdi:hvac-off")
 
     def test_temperature_unit(self):
         self.dps[UNIT_DPS] = "c"
