@@ -66,6 +66,7 @@ primary_entity:
     - id: 106
       type: integer
       name: password
+      sensitive: true
     - id: 110
       type: string
       name: schedule
@@ -193,7 +194,11 @@ secondary_entities:
         name: sensor
         type: string
         icon_priority: 1
+        optional: true
+        persist: false
         mapping:
+          - dps_val: null
+            value: OK
           - dps_val: MOWER_LEAN
             value: Tilted
             icon: "mdi:angle-acute"
