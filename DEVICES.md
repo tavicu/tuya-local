@@ -8,6 +8,7 @@
 - Atomi AT1632/AT1635 ceramic heaters
 - Betterlife BT1500 IR heater
 - Blumfeldt/Klarstein Cosmic Beam Smart 24 infrared radiant heater
+- Bonaire HPC5200020 electric heater
 - BVF CP1 heater
 - Caldo Up T fan heater
 - Calex Smart Convector heater
@@ -25,6 +26,7 @@
 - Eurom Wall Designheat 2000 heater
 - Goldair heater models beginning with the code GPPH, GCPV, GECO, PH-ET
 - Hama radiator controller
+- Heatstorm HS-1500 heater
 - Heatstorm HS-6000-GC heavy duty heater
 - Herschel infrared heater
 - HJZ oil column radiator
@@ -212,6 +214,7 @@
 - Hiper T3 bladeless fan
 - HYD WeAir Plus bladeless fan with heating function
 - Immax Neo Lite Vento ceiling fan with light
+- Klarstein Skyscaper Ice cooling fan
 - Ledkia fan and light controller
 - Lexy F501 fan
 - Keyun MKCFE002 RGB chandelier fan
@@ -233,6 +236,7 @@
 
 ### Air Purifiers
 
+- Arlec APR005HA air purifier
 - Breville Easy Air purifier
 - Breville Smart Air Connect purifier
 - Breville Smart Air Viral Protect Plus purifier
@@ -252,7 +256,7 @@
 - Soho SO-350WUI Air Purifier
 - Soleusair A02 and A10 air purifiers
 - Stadler Form Roger air purifier
-- Tesla Smart Pro and Mini air purifiers
+- Tesla Smart S300, Pro and Mini air purifiers
 - Vork VK6067AW air purifier
 
 ### Dehumidifiers
@@ -264,13 +268,14 @@
 - AlecoAir D25 Traditio dehumidifier
 - Argo Dry Pury Evo WF dehumidifier
 - Cleverio AD100 dehumidifier
+- DH-CSK03W dehumidifier
 - Ebac DJ4000 dehumidifier
 - ElectriQ CD12PRO-LE dehumidifier
 - ElectriQ CD12PW dehumidifier
 - ElectriQ CD12PWv2 dehumidifier
 - ElectriQ CD20PRO-LE-V2 dehumidifier
 - ElectriQ CD25PRO-LE-V2 dehumidifier
-- ElectriQ DESD9LW dehumidifier
+- ElectriQ DESD9LW dehumidifier (two variants)
 - Electriq PD45E dehumidifier
 - Eeese Adam dehumidifier
 - Eeese Anna dehumidifier
@@ -294,6 +299,7 @@
 - Tesla Smart XL dehumidifier
 - VacPlus dehumidifier
 - Vivosun DE0003 dehumidifier
+- Woods WDD90 dehumidifier
 
 ### Humidifiers
 
@@ -325,14 +331,16 @@
 ### Kitchen Appliances
 
 - Anko 1.7L smart kettle
-- Setti+ KT950W smart kettle
+- Casdon TD Pro 2 oven
 - Inkbird iBBQ-4BW cooking probe thermometer
 - Inkbird iBBQ-4T cooking probe thermometer (separate and combined measurement variants)
 - Inkbird IBS-M1S temperature probe hub
 - Inkbird IBT-26S BBQ thermometer
 - Inkbird sous vide cooker (also supports Silvercrest sous vide sticks)
 - Kogan glass 1.7L smart kettle
+- Setti+ KT950W smart kettle
 - Silvercrest 1.7L smart kettle
+- Silvercrest coffee maker
 - Ultenic K10 air fryer
 - Weekett smart kettle
 
@@ -362,6 +370,7 @@
 - Taxnele circuit breaker and energy meter
 - TOMPD-63LW energy meter circuit breaker
 - Tongou QCB2-WB WiFi 4P circuit breaker (3-phase and single phase variants)
+- Tongou SMR1 circuit breaker
 - Tongou ST463JWT 4P 3-phase circuit breaker
 - V-WIFI-DL02-ES energy consumption clamp meter
 - WDYK 2P63A energy meter
@@ -376,7 +385,10 @@
 - Feyree home EV charger (2 models)
 - Kolanky 3.6kW EV charger
 - Parkside PLGS 2012 A1 smart charger for powertools
+- Tera W01 EV charger
+- Vevor Level 2 EV charger
 - Vivor portable EV charger
+- Wada Power Q8 EV charger
 - WOUEJ 22kW EV charger
 
 ### SmartPlugs/Wall sockets/Wall switches/Inline switches
@@ -408,6 +420,7 @@ the best option.
 - Eightree ET43 3-outlet powerstrip with energy monitoring
 - ES01 3 outlet + USB powerstrip with individual timers
 - Gosund P1 3 outlet + USB powerstrip with power monitoring
+- Gosund SP112 RTL energy monitoring smartplug with USB
 - Grid Connect double outlet wall socket
 - Grid Connect double outlet with Energy Monitoring, Master and Individual switches and Child Lock
 - Grid Connect USB charger with power socket
@@ -419,9 +432,11 @@ the best option.
 - Loratap RR400W-V2 relay switch
 - Makegood double power point (sold under AusElectronicsDirect, Cleverlife, Kogan, Ozsmartthings and other brands)
 - MakeGood double switch with timers and power monitoring on whole device
+- Minoston 6 preset timer switch
 - Mirabella Genio smartplug with USB
 - Moes 3-gang switch
 - Moes 4-gang (quad) switch
+- Moes motion sensor smart switch
 - MoesHouse smartplug with RGBW nightlight
 - Noiee NSP21 smartplug
 - Noiee PU13 smartplug
@@ -477,7 +492,7 @@ of device.
 
 ### Lights
 
-- Generic CCT lightbulb (supporting color temperature and brightness)
+- Generic CCT lightbulb (supporting color temperature and brightness) - old and new style
 - Generic dimmable light (2 types, using dp 1,2 and 20,22)
 - Generic RGBCW/RGBWW lightbulb (confirmed with Lijun branded bulb, expected to match others also). Three versions - standard dps layout starting from 20, with and without scene/music modes and timer, and a non-standard layout starting from 1 but following the same pattern (tested with "A60" bulbs).
 - Generic RGBW lightbulb in the standard and non-standard patterns above but without color temperature control.
@@ -499,12 +514,13 @@ of device.
 - Galaxy Projector
 - HDMI sync light
 - iHD001 LED controller
+- Ion LED WiFi dimmer
 - Kojima motion sensor RGBCW nightlight
 - Lexi Lighting string light Wifi adapter
 - LightStar CCT track light
 - Loycco sound machine with nightlight (also sold as Momland nightlight with white noise)
 - Loginovo TV sync backlight
-- LSC smart connect RGB CCT lightbulb (similar to older generic bulbs, so may work for others) 
+- LSC smart connect RGB CCT lightbulb (similar to older generic bulbs, so may work for others)
 - Lytmi Fantasy/Neo 3 HDMI sync backlight
 - Marpou RGBCW ceiling light
 - Mirabella Genio Pixel LED oval light
@@ -572,6 +588,7 @@ of device.
 - Kabum Smart 700 vacuum cleaner (also sold as Liectroux XR500[T2] and maybe others)
 - Kabum Smart 700 vacuum cleaner 2023 model (not quite compatible with Liectroux XR500 T3, but similar revision)
 - Kogan LX10 vacuum cleaner with mop
+- Kogan LX8 vacuum cleaner
 - Kyvol E30 vacuum cleaner
 - Lefant LS1 Pro vacuum cleaner
 - Lefant M213 vacuum cleaner (also works for Lefant M213S and APOSEN A550)
@@ -590,6 +607,7 @@ of device.
 - Tesvor S6 vacuum cleaner with mop
 - TTEC Robi Pro vacuum cleaner
 - Ultenic T10 vacuum cleaner
+- Zedar R600 vacuum cleaner
 
 ### Lawnmowers
 
@@ -609,13 +627,14 @@ work reliably, even if listed below.
 
 ### Sirens
 
-- Iebeyond ECH doorbell with 433MHz RF hub
 - Neo Coolcam Siren with temperature and humidity alert (NAS-AB02W)
 - Orion Grid Connect outdoor siren (also Elesion NX-4980)
 - Sirena WS-902 Plus outdoor strobe siren
 
 ### Doorbells
 
+- Iebeyond ECH doorbell with 433MHz RF hub
+- KW02 video doorbell
 - WHM-04 doorbell (sold under various brands)
 
 ### Cameras
@@ -640,23 +659,29 @@ port and password.
 - BlitzWolf BW-IS6 security alarm system
 - GauTone PG-103 security alarm system
 - Smart alarm siren (unbranded)
+- Wolf Guard WT2R alarm system
 - ZX-DB11 doorbell and alarm system
 - ZX-DB11B doorbell and alarm system
 - ZX-G30 alarm system
 
-### Pet feeders
+### Pet care
 
 - Catit Pixi smart fountain
 - Catit pet feeder (Pixi 2.2kg dispenser and 6 meal versions, and another non-Pixi branded single dispenser)
 - Ceres Plus pet feeder with camera
+- Els Pet Spaceship pet litter box
 - HoneyGuardian S56 pet feeder
+- Leo's Loo Too pet toilet
 - Nedis pet feeder
 - Petlibro PLAF103 pet feeder
 - Petlibro PLAF203 pet feeder with camera
 - Petoneer Fresco Hydrate Ultra pet fountain/
 - PNI water feeder
 - Rojeco PTM-001 pet feeder (two versions)
+- Tesla Smart pet feeder
+- Tonepie T1PRO automatic cat litter box
 - V330L pet feeder
+- WellToBe Automatic Pet Feeder (WB S36D)
 - YP pet feeder
 
 ### Remote controllers
@@ -677,7 +702,7 @@ port and password.
 - Holman WX8 8 sprinkler irrigation controller
 - Qoto 03 smart water valve / sprinkler controller
 - Qoto 05 smart water valve / sprinkler controller
-- SH07-8 / SH07S-TY smart sprinkler controller (sold as Aquarobo and other brands)
+- SH07-8 / SH07S-TY smart sprinkler controller (sold as Aquarobo, Leictory LK06 and other brands)
 - Zemismart DP-WBS01 8-zone sprinkler controller (also sold as Benexmart and other brands)
 
 ### Miscellaneous
@@ -700,16 +725,17 @@ port and password.
 - Kogan bidet toilet seat
 - Kogan KAWHTNOSLPA white noise sleep aid
 - Konlen/Rockson WF96L water level controller
-- Leo's Loo Too pet toilet
 - Madimack Inverflow Pro pool pump
 - Mirabella Genio motion sensor
 - Momcozy white noise machine (2 variants)
 - Nedis WIFISA10CWT air quality monitor
 - PGST PA-010 indoor temperature and humidity sensor
 - PH-W218 water quality monitor
+- PlantsIO Ivy smart planter
 - PV28-CW 8 in 1 air quality monitor
+- RTCZ-03 human presence sensor
+- RainPoint TTV103FRF water timer
 - SD123 HPR01 human presence radar
-- Silvercrest coffee maker
 - SNT957W-TDE temperature sensor
 - SNT957W-DE CBU temperature and humidity sensor
 - Sunbeam dual heated mattress pad
@@ -717,7 +743,6 @@ port and password.
 - TH08 temperature and humidity sensor
 - TH16 temperature and humidity sensor
 - Timeguard WFPIR motion light controller
-- Tonepie T1PRO automatic cat litter box
 - Tontine electric blanket
 - Valehaus SYZN119 towel warmer
 - WeatherStation Pro
@@ -748,6 +773,8 @@ port and password.
 - PT216/PT19DB-2 temperature and humidity sensor
 - SGS01 plant sensor
 - Smart Ape solar garden light
+- SOP10 water sprinkler
+- TCS024B plant moisture sensor
 - TH05 temperature and humidity sensor
 - XCase NX-4964 lock box
 - YL01 water quality tester
@@ -755,6 +782,10 @@ port and password.
 - Generic water timers (confirmed with Johgee, Diivoo and Royal Gardineer branded devices)
 
 ### Devices supported via IR hubs
+
+In general IR hubs are supported as generic IR remote controllers.
+Some specialised devices have built-in sensors to also present other
+entity types as sub devices.
 
 - Air conditioner / heatpump via Moes IR hub
 - Neo IR Air Conditioner controller
@@ -769,9 +800,11 @@ port and password.
 - LoraTap SC500ZB-V2 curtain controller
 - Loratap SS9600ZB 6 button remote control
 - Moes BRT-100-TRV radiator valve
+- Moes dual dimmer module
 - Moes RGBCW lightbulb
 - Moes ZHT-002 thermostat
 - MultiIR MIR-TE100-TY temperature and humidity sensor
+- Nedis ZBRC10WT 4 button remote control
 - Nedis ZBSD10WT door/window sensor
 - Nedis ZBSC10WT temperature and humidity sensor
 - PY321-Z-TY energy meter
