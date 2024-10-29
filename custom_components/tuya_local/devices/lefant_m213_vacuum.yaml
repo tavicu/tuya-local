@@ -13,7 +13,7 @@ primary_entity:
       name: command
       mapping:
         - dps_val: standby
-          value: standby
+          value: stop
         - dps_val: smart
           value: smart
         - dps_val: chargego
@@ -107,12 +107,15 @@ primary_entity:
           value: High
     - id: 102
       type: integer
+      optional: true
       name: chassis_temperature
     - id: 103
       type: integer
+      optional: true
       name: heading
     - id: 104
       type: integer
+      optional: true
       name: iic_error_count
     - id: 105
       type: string
