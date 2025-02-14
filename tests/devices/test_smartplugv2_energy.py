@@ -1,6 +1,7 @@
 """Tests for the switch entity."""
 
 from homeassistant.components.binary_sensor import BinarySensorDeviceClass
+from homeassistant.components.number import NumberDeviceClass
 from homeassistant.components.sensor import SensorDeviceClass
 from homeassistant.components.switch import SwitchDeviceClass
 from homeassistant.const import (
@@ -75,6 +76,7 @@ class TestSwitchV2Energy(
             self.entities.get("number_timer"),
             max=1440.0,
             unit=UnitOfTime.MINUTES,
+            device_class=NumberDeviceClass.DURATION,
             scale=60,
         )
         self.setUpBasicSelect(
@@ -135,7 +137,6 @@ class TestSwitchV2Energy(
 
     def test_multi_switch_state_attributes(self):
         self.dps[TEST_DPS] = 21
-        self.dps[ERROR_DPS] = 26
         self.dps[CYCLE_DPS] = "1A2B"
         self.dps[RANDOM_DPS] = "3C4D"
 
@@ -143,7 +144,6 @@ class TestSwitchV2Energy(
             self.multiSwitch["switch_outlet"].extra_state_attributes,
             {
                 "test_bit": 21,
-                "fault_code": 26,
                 "cycle_timer": "1A2B",
                 "random_timer": "3C4D",
             },
@@ -171,3 +171,16 @@ class TestSwitchV2Energy(
             self.multiSensor["sensor_voltage"].extra_state_attributes,
             {"calibration": 22},
         )
+
+    def test_basic_bsensor_extra_state_attributes(self):
+        self.dps[ERROR_DPS] = 2
+        self.assertDictEqual(
+            self.basicBSensor.extra_state_attributes,
+            {"fault_code": 2},
+        )
+
+    def test_available(self):
+        self.dps[INITIAL_DPS] = None
+        self.assertFalse(self.basicSelect.available)
+        self.dps[INITIAL_DPS] = "on"
+        self.assertTrue(self.basicSelect.available)
