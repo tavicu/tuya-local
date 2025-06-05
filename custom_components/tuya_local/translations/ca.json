@@ -162,6 +162,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "Aire condicionat",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -429,7 +430,12 @@
                     "starting": "Inici",
                     "emptying": "Buidat",
                     "resetting": "Reinicialització",
-                    "reverse": "Inversió"
+                    "reverse": "Inversió",
+                    "full": "Ple",
+                    "empty": "Buit",
+                    "missing": "Falta",
+                    "formatting": "Formatant",
+                    "unformatted": "No formatat"
                 }
             },
             "time_remaining": {
@@ -496,6 +502,7 @@
                             "sleep": "Dorm",
                             "smart": "Intel·ligent",
                             "strong": "Fort",
+                            "custom": "Personalitzat",
                             "high": "Alt",
                             "medium": "Mitjà",
                             "low": "Baix",
@@ -634,6 +641,9 @@
                 "state": {
                     "cancel": "Cancel·la",
                     "continuous": "Continu",
+                    "30s": "30 segons",
+                    "1m": "1 minut",
+                    "2m": "2 minuts",
                     "5m": "5 minuts",
                     "10m": "10 minuts",
                     "20m": "20 minuts",
@@ -753,6 +763,40 @@
         "text": {
             "scene": {
                 "name": "Escena"
+            }
+        },
+        "water_heater": {
+            "water_air": {
+                "name": "Escalfador d'aigua",
+                "state_attributes": {
+                    "operation_mode": {
+                        "state": {
+                            "heat": "Escalfament",
+                            "cool": "Refredament",
+                            "auto": "Automàtic",
+                            "off": "Apagat",
+                            "hotwater": "Aigua calenta",
+                            "hotwater_cool": "Aigua calenta i refredament",
+                            "hotwater_heat": "Aigua calenta i escalfament",
+                            "hotwater_auto": "Aigua calenta i automàtic"
+                        }
+                    }
+                }
+            },
+            "kettle": {
+                "name": "Bullidor d'aigua",
+                "state_attributes": {
+                    "operation_mode": {
+                        "state": {
+                            "off": "Apagat",
+                            "heat": "Escalfament",
+                            "boil": "Ebullició",
+                            "quick_heat": "Calor ràpida",
+                            "quick_boil": "Ebullició ràpida",
+                            "keep_warm": "Conserva l'escalfor"
+                        }
+                    }
+                }
             }
         }
     }

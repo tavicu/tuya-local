@@ -163,6 +163,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "Klimaanlegg",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -341,6 +342,7 @@
                             "fresh": "Fresh",
                             "smart": "Smart",
                             "strong": "Sterk",
+                            "custom": "Egendefinert",
                             "high": "Høy",
                             "medium": "Medium",
                             "low": "Lav",
@@ -505,6 +507,9 @@
                 "state": {
                     "cancel": "Avbryt",
                     "continuous": "Kontinuerlig",
+                    "30s": "30 sekunder",
+                    "1m": "1 minutt",
+                    "2m": "2 minutter",
                     "5m": "5 minutter",
                     "10m": "10 minutter",
                     "20m": "20 minutter",
@@ -673,7 +678,12 @@
                     "starting": "Starter",
                     "emptying": "Tømming",
                     "resetting": "Tilbakestilling",
-                    "reverse": "Revers"
+                    "reverse": "Revers",
+                    "full": "Full",
+                    "empty": "Tom",
+                    "missing": "Manglende",
+                    "formatting": "Formatering",
+                    "unformatted": "Uformaterte"
                 }
             },
             "time_remaining": {
@@ -754,6 +764,40 @@
         "text": {
             "scene": {
                 "name": "Scene"
+            }
+        },
+        "water_heater": {
+            "water_air": {
+                "name": "Vannvarmer",
+                "state_attributes": {
+                    "operation_mode": {
+                        "state": {
+                            "heat": "Varm",
+                            "cool": "Kald",
+                            "auto": "Auto",
+                            "off": "Av",
+                            "hotwater": "Varmt vann",
+                            "hotwater_cool": "Varmt vann og kald",
+                            "hotwater_heat": "Varmt vann og varmt",
+                            "hotwater_auto": "Varmt vann og auto"
+                        }
+                    }
+                }
+            },
+            "kettle": {
+                "name": "Vannkoker",
+                "state_attributes": {
+                    "operation_mode": {
+                        "state": {
+                            "off": "Av",
+                            "heat": "Varm",
+                            "boil": "Kok",
+                            "quick_heat": "Kjapp varming",
+                            "quick_boil": "Kjapp koking",
+                            "keep_warm": "Hold varm"
+                        }
+                    }
+                }
             }
         }
     }
